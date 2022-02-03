@@ -8,6 +8,17 @@ const ingredients = [
 ];
 
 
+const itemList = document.querySelector('#ingredients')
+
+const list = (item) => {
+    const element = document.createElement(`li`);
+    element.textContent = item;
+    return element;
+};
+
+const createList = ingredients.map(list);
+itemList.append(...createList);
+// console.log(createList);
 
 // Напиши скрипт, который для каждого 
 // элемента массива ingredients:
