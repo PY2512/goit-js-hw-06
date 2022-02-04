@@ -3,11 +3,11 @@ const textInputData = Number(textInput.dataset.length);
 
 textInput.addEventListener('blur', () => {
     const textInputContentLength = textInput.value.length;
-    if (textInputContentLength !== textInputData) {
-        replaceClasses('invalid', 'valid')
+    if (textInputContentLength === textInputData) {
+        replaceClasses('valid', 'invalid')
         return;
     }
-    replaceClasses('valid', 'invalid')
+    replaceClasses('invalid', 'valid')
 });
 
 const replaceClasses = (classToAdd, classToRemove) => {
